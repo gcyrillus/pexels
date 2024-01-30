@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f9f9;
+}
+.modal {
+    width:auto;
+}
+label[for="modal"] {
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  top: 0;
+  font-size: 2rem;
+  aspect-ratio: 1/1;
+  display: block;
+  width: 1.5em;
+  box-shadow: -1px 1px 3px gray;
+}
+#zoombox-img {
+  display: block;
+}
+.top.pexels {
+    background:url(https://images.pexels.com/photos/17073138/pexels-photo-17073138/free-photo-of-poppy-in-barley-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) 50% 100% / cover  #E3CEB0;
+}
+
+.camera {
+    margin: 0.15em 0.5em;
+    scale:2;
+}
+
+.camera path {
+    fill:#DC0A00;
+}
+
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap:0 0.2em;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.hero-title {
+    filter : drop-shadow(2px 2px #fff);
+    font-weight: 700;
+    font-size:2.5em;
+    margin:0.2em;
+}
+
+form {
+    width: 100%;;
+}
+form p {
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.25em;
+    align-items:center; 
+    width: 100%;
+}
+p:empty{display:none;}
+.search-pexels {
+    flex:1 0;
+    height: 1.95em;
+    font-size: 1.4em;
+    background-image: url("/plugins/banquedimage/img/search-solid.svg");
+    background-repeat: no-repeat;
+    background-position: 97%;
+    background-size: 0.6em;
+    border-radius: 4px;
+    border: none;
+    border: 1px solid #dadada;
+    padding-left: 20px;
+}
+.search-pexels:focus {
+    outline: none;
+}
+.search-pexels::-moz-placeholder {
+    color: #dadada;
+}
+.search-pexels:-ms-input-placeholder {
+    color: #dadada;
+}
+.search-pexels::placeholder {
+    color: #dadada;
+}
+
+.submit {
+    background: black;
+    color: white;
+    border: none;
+    padding: 0.8em 2em;
+    text-transform: uppercase;
+    transition: 1s;
+ 
+    height:100%
+}
+.submit:hover {
+    background: #4d4d4d;
+}
+
+.alert-msg-pexels {
+    display: flex;
+    color: red;
+}
+
+p {
+    margin: 0.5em;
+    background:#fff0;
+    border-radius:0.25em;
+}
+
+.results-pexels {
+    margin-top: 2em;
+    padding: 0 calc(50vw - 800px);
+}
+
+.search-text-pexels{
+    text-transform: capitalize;
+    flex: 1;
+    border-bottom: double;
+    background: antiquewhite;
+    margin-block: .5em;
+    padding: 0 0.5em;
+}
+
+.search-text-pexelsh2{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.tags {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.col-4 {
+    
+}
+#searchPagination-pexels {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5em;
+    padding: 1em;
+}
+#searchPagination-pexels .btn {
+    padding: 0.15em 0.5em;
+    background: deepskyblue;
+    border: 1px solid #3335;
+    border-radius: 5px;
+    font-size: 1em;
+}
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+@media (max-width: 768px) {
+    .hero img {
+        height: 50vh;
+    }
+    .hero .hero-title {
+        font-size: 1.8em;
+    }
+    
+    .col-4 {
+        
+    }
+    
+    .hero-text {
+        max-width: 80%;
+    }
+    
+    .search-pexels {
+        font-size: 12px;
+        padding: 1.5em;
+        max-width: 100%;
+        width: 100%;
+        background-size: 1.3em;
+    }
+    
+    .submit {
+        width: 100%;
+    }
+    
+    .search-text-pexelsh1 {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+}
+.img-col {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 0.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.container img {
+    height:clamp(70px,8vw,180px);
+    max-width: 100%;
+}
+.flex-images .item:hover {
+  scale: 1.5;
+  z-index: 1;
+  box-shadow:0 0 5px #333;
+}
+.results-pexels .flex-images {
+    overflow:visible;
+}
+.flex-images img {
+    min-width:100%;
+}
+.icon-md {
+    height: 15px;
+}
+
+[data-icon=heart] {
+    color: red;
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.card-body {
+    max-width:100%;
+    background: white;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-top: -4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display:none
+}
+
+.col-4.item a {
+  opacity:0;
+  position: absolute;
+ inset:0;
+  margin:auto;
+  height:min-content;
+  width:max-content;
+  transition:0.5s 0.5s;
+  box-shadow: 0 0 2px;
+  padding:.5em;
+  color:white;
+  background: #3338
+}
+.col-4.item:hover a {
+  opacity:.5;
+}
+.col-4.item:hover a:hover {
+    transition: 0s 0s;
+  opacity:1;
+}
+.branding {
+  clear: both;
+}
+
+#justUploaded-pexels:has(dialog[open]) {
+  position:fixed;
+  z-index: 1000002;
+  inset:0;
+  display:grid;
+  place-items: center;
+  background:#333a;
+  backdrop-filter: blur(2px);
+}
+.modal:has(#modal:checked) #modal__overlay {
+  backdrop-filter: blur(2px);
+}
+#justUploaded-pexels dialog[open] {
+    display:grid;
+    gap:0.5em;
+}
+#justUploaded-pexels dialog > div {
+  display: flex;
+  align-items: center;
+    gap:0.25em;
+}
+#justUploaded-pexels img {
+  max-width:100%;
+  max-height:50vh;
+  display: block;
+  margin: auto;
+}
+#justUploaded-pexels  code {
+  display:inline-block;
+  border:inset 2px;
+  padding:0.25em;
+}
+dialog button {
+  float:right;
+}
+#justUploaded-pexels b {
+  width: 5em;
+  display: inline-block;
+}
+#justUploaded-pexels  i {
+  color:crimson;
+  font-weight: bolder
+}
+main.grid{max-height:100vh;overflow:auto;}
+section.col:has(#form_uploader #files_uploader[style="display: block;"]) :is(.container,#success-pexels,.results-pexels,.branding ){
+display:none;
+}
+#form_uploader {
+}
+.container.top:has(form#search-form-pexels) {
+  position:sticky;
+  top:2px;
+  z-index: 1000001;
+  box-shadow: 0 0 00 2px;
+}
+section.section:has(#modal:checked) .container.top:has(form#search-form-pexels) {
+  z-index: 0;
+}
+div.container.top {
+  position: sticky;
+  top: 0;
+}
