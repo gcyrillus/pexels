@@ -245,7 +245,7 @@
 			$returnData[2] = $url;
 			$returnData[3] = $name;
 			$returnData[4] = $dir.$name;
-			$returnData[5] = 'data/'.plxUtils::strCheck(basename($_SESSION['medias']).'/'.$_SESSION['folder']).$name;
+			$returnData[5] = plxUtils::strCheck(basename($_SESSION['medias']).'/'.$_SESSION['folder']).$name;
 
 			echo json_encode($returnData);
 
